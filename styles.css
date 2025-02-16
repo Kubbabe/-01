@@ -1,0 +1,226 @@
+/* รีเซ็ตค่าเบื้องต้นเพื่อให้การจัดตำแหน่งตรงกัน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* รูปแบบทั่วไป */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ee0000;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Hero Section (ส่วนต้อนรับ) */
+#hero {
+    background-image: url('steak-hero.jpg'); /* ใส่ภาพที่ต้องการ */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 100px 20px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    background-color: #f0a500;
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: #e68900;
+}
+
+/* Featured Section (สเต็กแนะนำ) */
+#featured {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+#featured h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #8B0000;
+}
+
+.steak-item {
+    display: inline-block;
+    margin: 0 20px;
+    width: 280px;
+    text-align: center;
+}
+
+.steak-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.steak-item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.steak-item p {
+    font-size: 18px;
+    color: #8B0000;
+    margin-top: 5px;
+}
+/* เมนูทั้งหมด */
+/* ตั้งค่าให้เนื้อหาอยู่ตรงกลาง */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* สไตล์ของ Header */
+header {
+    width: 100%;
+    background-color: #8B0000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ตั้งค่ากึ่งกลางสำหรับ main */
+main {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* กำหนด container ให้จัดเรียงตรงกลาง */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* จัดตรงกลางแนวนอน */
+    gap: 20px;
+}
+
+/* การตั้งค่าให้กล่องเมนูมีความสวยงามและอยู่กึ่งกลาง */
+.menu-item {
+    width: 250px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(243, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h2 {
+    margin: 10px 0;
+}
+
+.menu-item span {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer ให้อยู่ตรงกลาง */
+footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #8B0000;
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* การจัดการเมื่อหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column; /* จัดให้เมนูเรียงตามแนวตั้งเมื่อหน้าจอเล็ก */
+        align-items: center; /* ให้เมนูอยู่กลางหน้าจอ */
+    }
+
+    .menu-item {
+        width: 90%; /* ให้แต่ละเมนูขยายเต็มหน้าจอ */
+    }
+}
+/* จัดรูปภาพในส่วนเกี่ยวกับเราให้เป็น Grid */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
